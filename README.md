@@ -5,7 +5,7 @@ Home: https://bitbucket.org/richierocks/assertive.reflection
 
 Package license: GPL (>= 3)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A set of predicates and assertions for checking the state and capabilities of R, the operating system it is running on, and the IDE being used.  This is mainly for use by other package developers who want to include run-time testing features in their own packages. End-users will usually want to use assertive directly.
 
