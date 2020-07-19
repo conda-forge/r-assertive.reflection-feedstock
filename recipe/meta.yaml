@@ -1,4 +1,4 @@
-{% set version = '0.0-4' %}
+{% set version = "0.0-4.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/assertive.reflection_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive.reflection/assertive.reflection_{{ version }}.tar.gz
-  sha256: 123672e1a99fc79e7e9e91566ee21bba1fb45fd13e353e41c52e3300ecd2f5a7
+  sha256: f14417cd0d3c6b8994f582817c522109f287eeebcc7c57ca15590604f4708cb0
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1003
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,12 +39,9 @@ test:
 about:
   home: https://bitbucket.org/richierocks/assertive.reflection
   license: GPL (>= 3)
-  summary: A set of predicates and assertions for checking the state and capabilities of R, the
-    operating system it is running on, and the IDE being used.  This is mainly for use
-    by other package developers who want to include run-time testing features in their
-    own packages. End-users will usually want to use assertive directly.
+  summary: A set of predicates and assertions for checking the state and capabilities of R, the operating system it is running on, and the IDE being used.  This is mainly for use by other package developers who want to include run-time testing features in their own packages. End-users will usually want to use assertive directly.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
