@@ -1,4 +1,4 @@
-{% set version = "0.0-4.1" %}
+{% set version = "0.0-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/assertive.reflection_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive.reflection/assertive.reflection_{{ version }}.tar.gz
-  sha256: f14417cd0d3c6b8994f582817c522109f287eeebcc7c57ca15590604f4708cb0
+  sha256: c2ca9b27cdddb9b9876351afd2ebfaf0fbe72c636cd12aa2af5d64e33fbf34bd
 
 build:
   noarch: generic
