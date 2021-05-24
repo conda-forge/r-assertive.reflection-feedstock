@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: assertive.reflection_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/assertive.reflection_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive.reflection/assertive.reflection_{{ version }}.tar.gz
   sha256: c2ca9b27cdddb9b9876351afd2ebfaf0fbe72c636cd12aa2af5d64e33fbf34bd
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,10 +37,11 @@ test:
 
 about:
   home: https://bitbucket.org/richierocks/assertive.reflection
-  license: GPL (>= 3)
+  license: GPL-3.0-or-later
   summary: A set of predicates and assertions for checking the state and capabilities of R, the operating system it is running on, and the IDE being used.  This is mainly for use by other package developers who want to include run-time testing features in their own packages. End-users will usually want to use assertive directly.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
