@@ -3,7 +3,7 @@ About r-assertive.reflection
 
 Home: https://bitbucket.org/richierocks/assertive.reflection
 
-Package license: GPL (>= 3)
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-assertive.reflection-feedstock/blob/master/LICENSE.txt)
 
